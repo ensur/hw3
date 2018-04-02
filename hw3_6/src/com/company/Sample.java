@@ -1,0 +1,26 @@
+package com.company;
+
+public class Sample {
+    public void one(){
+        int i=0;
+    }
+    private void two(){
+        int i = 1;
+    }
+    private void three(){
+        int i = 1;
+    }
+    protected void four(){
+        int i = 2;
+    }
+    protected void five(){
+        int i = 2;
+    }
+    private void six(){
+        int i = 1;
+    }
+    private void seven(){
+        int i = 1;
+    }
+
+}
