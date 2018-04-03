@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.*;
 
@@ -13,12 +14,13 @@ public class Main {
         System.out.println();
        Sample ob = new Sample();//рефлексия
        Class<?> c = ob.getClass();
-       Method[] m = c.getDeclaredMethods();
+
+       Field[] m = c.getDeclaredFields();
        HashMap<String, Integer> ar = new HashMap<>();//создаем хэшмапу
 
 
 
-      for(Method s : m){//идем по Method[], знаем, что s принимает значения строки
+      for(Field s : m){//идем по Field[], знаем, что s принимает значения строки
 
            ar.put(s.toString().split(" ")[0], ar.get(s.toString().split(" ")[0])==null ? 1 : ar.get(s.toString().split(" ")[0])+1 );//Работая со строкой берем первое слово, это ключ в мапе,
                                                                                                                                                     //достаём по нему количество вхождений, если null,
