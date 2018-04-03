@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Main {
@@ -15,6 +17,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Consumer<List> out = s -> System.out.println(s);
         ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -26,6 +29,6 @@ public class Main {
 
         listProc(list, (n) -> (n%2)==0, 3);//проверка на четность и умножение
         listProc(list, (n) -> (n%2)!=0, 5);//проверка на нечетность
-        list.forEach((i) -> System.out.println(i));
+        out.accept(list);
     }
 }
