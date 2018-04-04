@@ -36,7 +36,7 @@ public class Main {
                 mem=i+1;
                 }
         }
-        formatData.add(temp.substring(mem, temp.length()));//Чей туфля? Ой, моё! это чтобы последний кусок после разделителя тоже добавило
+        formatData.add(temp.substring(mem, temp.length()));//это чтобы последний кусок после разделителя тоже добавило
         //formatData.forEach(s -> System.out.println("format data:" + s + "Format data size: " + formatData.size()));
         for(int i=0; i<formatData.size(); i++){//это ставим соответствие листу с кусками - соответствующий по индексам лист регулярок
            // System.out.println("Индекс : " + i + ", берем длину элемента :" + formatData.get(i));
@@ -54,7 +54,7 @@ public class Main {
         //indexDelimeter.forEach(s -> System.out.println(s));
        // regExp.forEach(s -> System.out.println(s));
         String reg = regExp.get(0) + "[" + temp.charAt(indexDelimeter.get(0)) + "]"+ regExp.get(1) +"[" + temp.charAt(indexDelimeter.get(1)) + "]"+regExp.get(2);
-        System.out.println("Regulyarrrrrka:" + reg); //составили наше регулярное выражение. Разделителей два, если больше то нужно это всё пихать в цикл и ставить их по циклу, но давайте пользователь умный, иначе быдлокод получается :(
+        System.out.println("Regulyarrrrrka:" + reg); //составили наше регулярное выражение. Разделителей два, если больше то нужно это всё пихать в цикл и ставить их по циклу.
         return reg;
     }
     public static void testData(String reg, String data){
@@ -69,4 +69,4 @@ public class Main {
         testData(makeReg(), getData());
     }
 }//P.S. Програмка сыровата, понимаю, знаю как доделать, но пора делать юнит тесты, иначе в чт. буду плавать и новое накопится, если
-// считаете, что всё это не Рио-де-Жанейро, а гораздо хуже, то наверное тогда ставить как есть дз, без этой проги.
+// всё это неправильно, то наверное тогда ставить как есть дз, без этой проги.
